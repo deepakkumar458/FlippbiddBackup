@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/color_white"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="@dimen/_7sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/tint_color"
+                android:rotation="50"
+                android:padding="@dimen/_5sdp"
+                android:src="@mipmap/add" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutUserDetailsBox"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_toLeftOf="@+id/image5_share"
+                android:layout_toRightOf="@+id/imageViewBack">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:textColor="@color/tint_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_3sdp"
+                    android:text="User Profile"
+                    android:textSize="@dimen/_15sdp"
+                    app:font_type="font_regular"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewMyProfileUserNameTitle1"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    app:font_type="font_bold"/>
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewMyProfileAddressTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewMyProfileUserNameTitle1"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <com.flippbidd.CommonClass.CircleImageView
+                android:id="@+id/imageCircleViewMyProfile"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/white_bordr" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imageCircleViewMyProfile"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutOfReviewData"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <RatingBar
+                        android:id="@+id/ratingBar2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:progressBackgroundTint="@color/yellow"
+                        android:progressTint="@color/yellow"
+                        android:rating="0"
+                        android:stepSize="0.5" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewRatingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_toRightOf="@+id/viewUserNameLine"
+                        android:text="(0)"
+                        android:textColor="@color/sky"
+                        android:textSize="@dimen/_10sdp"
+                        app:font_type="font_regular" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/imageViewUserNameIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="center"
+                        android:src="@drawable/username"/>
+
+                    <View
+                        android:id="@+id/viewUserNameLine"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/imageViewUserNameIcon"
+                        android:background="@color/Gray" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewMyProfileUserNameTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/viewUserNameLine"
+                        android:text="USER NAME"
+                        android:textColor="@color/sky"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_bold" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewMyProfileUserNameValues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewMyProfileUserNameTitle"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/viewUserNameLine"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/imageViewFullNameIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="center"
+                        android:src="@drawable/fullname"/>
+
+                    <View
+                        android:id="@+id/viewFullNameLine"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/imageViewFullNameIcon"
+                        android:background="@color/Gray" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewMyProfileFullNameTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/viewFullNameLine"
+                        android:text="FULL NAME"
+                        android:textColor="@color/sky"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_bold" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewMyProfileFullNameValues"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewMyProfileFullNameTitle"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/viewFullNameLine"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_progress_dialog" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flippbidd.iml" filepath="$PROJECT_DIR$/.idea/modules/flippbidd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.iml" filepath="$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ColorDialog/flippbidd.ColorDialog.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flippbidd.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flippbidd.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flippbidd.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flippbidd.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flippbidd.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flippbidd.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/flippbidd.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/flippbidd.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.iml" filepath="$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ccp/flippbidd.ccp.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.iml" filepath="$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/filepicker/flippbidd.filepicker.unitTest.iml" />
+    </modules>
+  </component>
+</project>

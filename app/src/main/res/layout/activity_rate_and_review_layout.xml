@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_7sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:rotation="180"
+                app:tint="@color/color_black"
+                android:src="@drawable/back_arrow" />
+
+
+            <com.flippbidd.CustomClass.CustomTextView
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/imageViewBack"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:text="User Feedback"
+                android:textSize="@dimen/_15sdp"
+                app:font_type="font_regular"/>
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/main_toolbar"
+        android:layout_above="@+id/llSubmitBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:paddingTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/rating_qst_title_message"
+                android:textSize="@dimen/_14sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/white">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewQuestion1"
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/rating_qst_1"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_semi_bold"/>
+
+
+               <!-- <RatingBar
+                    android:id="@+id/rotationratingbar_main"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    style="@style/foodRatingBar"
+                    android:progressDrawable="@drawable/food_rating_bar_full"
+                    android:layout_below="@+id/textViewQuestion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:numStars="5"/>-->
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rotationratingbar_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion1"
+                    app:srb_isIndicator="false"
+                    app:srb_drawableEmpty="@drawable/unfill"
+                    app:srb_drawableFilled="@drawable/star_rate"
+                    app:srb_starHeight="18dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="18dp"
+                    app:srb_stepSize="0.5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/white">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewQuestion2"
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    app:font_type="font_semi_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/rating_qst_2"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rotationratingbar_main2"
+                    android:layout_below="@+id/textViewQuestion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_isIndicator="false"
+                    app:srb_drawableEmpty="@drawable/unfill"
+                    app:srb_drawableFilled="@drawable/star_rate"
+                    app:srb_starHeight="18dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="18dp"
+                    app:srb_stepSize="0.5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/white">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewQuestion3"
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/rating_qst_3"
+                    app:font_type="font_semi_bold"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rotationratingbar_main3"
+                    android:layout_below="@+id/textViewQuestion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_isIndicator="false"
+                    app:srb_drawableEmpty="@drawable/unfill"
+                    app:srb_drawableFilled="@drawable/star_rate"
+                    app:srb_starHeight="18dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="18dp"
+                    app:srb_stepSize="0.5"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/white">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewQuestion4"
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/rating_qst_4"
+                    app:font_type="font_semi_bold"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rotationratingbar_main4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion4"
+                    app:srb_isIndicator="false"
+                    app:srb_drawableEmpty="@drawable/unfill"
+                    app:srb_drawableFilled="@drawable/star_rate"
+                    app:srb_starHeight="18dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="18dp"
+                    app:srb_stepSize="0.5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/white">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewQuestion5"
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/rating_qst_5"
+                    app:font_type="font_semi_bold"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rotationratingbar_main5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewQuestion5"
+                    app:srb_isIndicator="false"
+                    app:srb_drawableEmpty="@drawable/unfill"
+                    app:srb_drawableFilled="@drawable/star_rate"
+                    app:srb_starHeight="18dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="18dp"
+                    app:srb_stepSize="0.5"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color"/>
+
+            <!--Comments-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        style="@style/TextViewNormalBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imageViewSelectAddress"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="Comments:"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_semi_bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:background="#f9f9f9">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewCommentsValues"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="left"
+                        android:hint="Comments"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--End-->
+
+            <LinearLayout
+                android:id="@+id/llSubmitBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/_5sdp">
+
+                <com.flippbidd.CustomClass.CustomAppCompatButton
+                    android:id="@+id/btnSubmitFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/button_gradian"
+                    android:text="Submit Review"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    app:font_type="font_bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+    <include layout="@layout/layout_progress_dialog" />
+
+</RelativeLayout>

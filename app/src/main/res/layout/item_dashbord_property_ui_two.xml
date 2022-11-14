@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mConstraintLayoutPropertyUi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_7sdp"
+    android:elevation="@dimen/_7sdp"
+    android:paddingBottom="@dimen/_5sdp"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/relativeItemMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_xml"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--View Pager-->
+        <RelativeLayout
+            android:id="@+id/relativeViewPagerBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:background="@drawable/common_xml">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_4sdp">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_23sdp"
+                app:ci_drawable="@drawable/radio_button_on"
+                app:ci_drawable_unselected="@drawable/radio_button_off"
+                app:ci_height="@dimen/_6sdp"
+                app:ci_width="@dimen/_6sdp" />
+
+            <ImageView
+                android:id="@+id/PropertyNoimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_image_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewUnavailableIconView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/unavailable_image"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageThreeDotAction"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/ic_dotte"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/imageTempView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/temp_wall"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imagePropertyLikeStatus"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/heart_border_new" />
+
+            <RelativeLayout
+                android:id="@+id/viewTimeCountDown"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/blue"
+                android:paddingLeft="@dimen/_10sdp"
+                android:visibility="gone">
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewofChatTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="11 days "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_8sdp"
+                    app:font_type="font_regular" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeUserDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:visibility="gone">
+
+                <com.flippbidd.CommonClass.CircleImageView
+                    android:id="@+id/imagePUser"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:src="@mipmap/user"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_1sdp" />
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtRatingValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/imagePUser"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/txtRatingValue"
+                    android:src="@drawable/star_solid" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--Details Header-->
+        <RelativeLayout
+            android:id="@+id/relativeHeaderBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeViewPagerBox"
+            android:layout_marginTop="@dimen/_minus4sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPropertyLocation2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_3sdp">
+
+
+                <!--bad-->
+                <RelativeLayout
+                    android:id="@+id/relativeBadView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewPropertyDetailsBedsNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_toRightOf="@+id/imageViewThumCountIcon"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:text="0 bd"
+                        android:textColor="@color/tint_color"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@color/subTitleText" />
+
+                <!--bath-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewPropertyDetailsBathNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageViewViewCountIcon"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:text="0 ba"
+                        android:textColor="@color/tint_color"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@color/subTitleText" />
+
+                <!--bath-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewAreaValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:text="0 Sqft"
+                        android:textColor="@color/tint_color"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtPropertyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/linearPriceView"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="2"
+                android:paddingRight="@dimen/_5sdp"
+                android:textColor="@color/tint_color"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="font_semi_bold" />
+
+            <ImageView
+                android:id="@+id/img_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPropertyName"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:src="@drawable/map_pin"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPropertyName"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:src="@drawable/eye_hide" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtPropertyLocation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPropertyName"
+                android:layout_toRightOf="@+id/img_eye"
+                android:maxLines="3"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_10sdp"
+                app:font_type="font_light" />
+
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtPropertyLocation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPropertyName"
+                android:layout_toLeftOf="@+id/linearPriceView"
+                android:layout_toRightOf="@+id/txtPropertyLocation1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:textColor="@color/tint_color"
+                android:textSize="@dimen/_10sdp"
+                app:font_type="font_light" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearPriceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtPropertyPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:text="$0"
+                    android:textColor="@color/tint_color"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_type="font_semi_bold" />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtDistanceMeter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPropertyPrice"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:text="0 miles"
+                    android:textColor="@color/tint_color"
+                    android:textFontWeight="300"
+                    android:textSize="@dimen/_13sdp"
+                    app:font_type="font_light" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </RelativeLayout>
+
+
+        <!--Unlisted/Listed TAG-->
+        <RelativeLayout
+            android:id="@+id/relativeUnlistedListedTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeHeaderBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_minus9sdp"
+            android:background="@drawable/button_ab_gradient">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtUnlistedListedTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Off-Market"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    &lt;!&ndash;Property and Rental Data Show&ndash;&gt;
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/relativeItemMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/light_gray"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            &lt;!&ndash;first&ndash;&gt;
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationProgress"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorWhite"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="simple_loader.json"
+                    app:lottie_loop="true" />
+
+                <ImageView
+                    android:id="@+id/property_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/no_image_icon"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/imageViewUnavailableIconView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/unavailable_image"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_bg" />
+
+            &lt;!&ndash;new center layout&ndash;&gt;
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutOfListedUnListedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_7sdp"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:background="@drawable/button_ab_gradient"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewPropertyPriceListed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_10sdp"
+                        app:font_type="font_regular" />
+
+                </RelativeLayout>
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtDistanceMeter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="5.6 mile"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="gone" />
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewPropertyTypeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayoutOfListedUnListedButton"
+                    android:padding="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_bold" />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewPropertyAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewPropertyTypeTitle"
+                    android:maxLines="3"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_10sdp"
+                    app:font_type="font_regular" />&lt;!&ndash;android:visibility="gone"&ndash;&gt;
+
+
+                <LinearLayout
+                    android:id="@+id/linearlayoutOfBedsBathBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewPropertyAddress"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageViewBedNoIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/bed"
+                            android:tint="@color/colorWhite" />
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/textViewPropertyDetailsBedsNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_toRightOf="@+id/imageViewBedNoIcon"
+                            android:padding="@dimen/_3sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5">
+
+                        <ImageView
+                            android:id="@+id/imageViewBathNoIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/room"
+                            android:tint="@color/colorWhite" />
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/textViewPropertyDetailsBathNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_toRightOf="@+id/imageViewBathNoIcon"
+                            android:padding="@dimen/_3sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutOfArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewPropertyDeatilsAddress"
+                        android:layout_toRightOf="@+id/linearlayoutOfBedsBathBox">
+
+                        <ImageView
+                            android:id="@+id/imageViewAreaIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:padding="@dimen/_3sdp"
+                            android:src="@drawable/area"
+                            android:tint="@color/colorWhite" />
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/textViewAreaValues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_toRightOf="@+id/imageViewAreaIcon"
+                            android:padding="@dimen/_3sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewPropertyAddress"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewMilIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/dollar"
+                        android:tint="@color/colorWhite"
+                        android:visibility="gone" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewPropertyDetailsMilValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_toRightOf="@+id/imageViewMilIcon"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            &lt;!&ndash;end new center layout&ndash;&gt;
+
+
+            &lt;!&ndash;unuse center layout&ndash;&gt;
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewPropertyTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Multi family"
+                        android:textColor="@color/sky"
+                        android:textSize="@dimen/_14sdp"
+                        app:font_type="font_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewBedsRoomTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 Beds"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_regular" />
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewBathRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:text="2 Baths"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewSquareTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2100 Sqft"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewCityTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New York"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_5sdp">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewRentsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$1100"
+                        android:textColor="@color/sky"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_regular" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            &lt;!&ndash;action button part&ndash;&gt;
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/imageViewDeleteIcon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@mipmap/delete" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/imageViewUnavailableIcon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@mipmap/unvailable" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/imageEditPropertyIcon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@mipmap/edit" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/imageViewHeartIcon"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@drawable/heart_border_new" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lenarLatoutOfMessageViewBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageMessages"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@drawable/mail" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/viewTimeCountDown"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/timeshow"
+            android:backgroundTint="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/imageViewClock"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:src="@drawable/ic_access_time_black_24dp" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewofChatTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/imageViewClock"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_8sdp"
+                app:font_type="font_regular" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    -->

@@ -1,0 +1,225 @@
+buildscript {
+    repositories {
+        google()
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-parcelize'
+apply plugin: 'com.google.firebase.crashlytics'
+
+//repositories {
+//    maven { url 'https://maven.fabric.io/public' }
+//}
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'flippbidd'
+            keyPassword 'flippbidd@123'
+            //  storeFile file('D:/RachanaProjects/flippbidd04032022/flippbidd/playstoredetails/flippbidds.jks')
+            //   storeFile file('C:/Users/Shivam/Desktop/flippbidd_16_04_2022/flippbidd/playstoredetails/flippbidds.jks')
+            //storeFile file('C:/Users/Shivam/Music/flippbidd_16_04_2022/flippbidd/playstoredetails/flippbidds.jks')
+            storeFile file('E:/RachanaProjects/flippbidd_16_04_2022 (1)/flippbidd_16_04_2022/flippbidd/playstoredetails/flippbidds.jks')
+            
+            storePassword 'flippbidd@123'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude("META-INF/*.kotlin_module")
+    }
+    compileSdkVersion 31
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+        applicationId "com.flippbidd"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 65
+        versionName "3.2" //"2.2.10" //2.2.4
+        resConfigs "en"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            buildConfigField "String", 'BASE_URL', '"https://admin.flippbidd.com/"'
+        }
+        debug {
+//            shrinkResources true
+//            buildConfigField "String", 'BASE_URL', '"https://practicetlc.com/flippbidddev/"'
+            //buildConfigField "String", 'BASE_URL', '"https://www.flippbiddapp.com/app/"' //dev url
+            buildConfigField "String", 'BASE_URL', '"https://admin.flippbidd.com/"'  //live url
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+// twc.online
+
+    lintOptions {
+        abortOnError false
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+//        jvmTarget = '11'
+    }
+
+}
+
+repositories {
+    maven { url "https://raw.githubusercontent.com/sendbird/SendBird-SDK-Android/master/" }
+    maven { url "https://raw.githubusercontent.com/sendbird/sendbird-syncmanager-android/master/" }
+    jcenter()
+    google()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    def appcompat_version = '1.4.0'
+
+//    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    // For loading and tinting drawables on older versions of the platform
+    implementation "androidx.appcompat:appcompat-resources:1.4.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'//1.1.3
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+//    implementation 'androidx.core:core-ktx:1.6.0'
+    //crop image view
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'//-alpha3
+//    implementation 'com.google.android.material:material:1.0.0-alpha09'//-alpha3
+    implementation 'com.google.android.material:material:1.4.0'
+    //permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'androidx.palette:palette:1.0.0'
+
+    //in app purchase
+    def billing_version = "4.0.0"
+    implementation "com.android.billingclient:billing:$billing_version"
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    //api
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    //end
+
+    //room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    //work manager
+    implementation 'android.arch.work:work-runtime:1.0.1'
+    // SendBird
+//    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.136'
+    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.0.168'
+//    implementation 'com.sendbird.sdk:sendbird-calls:1.6.1'
+    implementation 'com.sendbird.sdk:sendbird-calls:1.8.0'
+
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    // SendBird SyncManager
+    implementation 'com.sendbird.sdk:sendbird-syncmanager:1.1.19'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'com.github.stfalcon:multiimageview:0.1'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    //animation progress
+    implementation 'com.airbnb.android:lottie:4.2.2'
+    //image loader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //validation
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    //image selection
+    implementation 'com.fxn769:pix:1.2.5'
+    implementation 'com.asksira.android:bsimagepicker:1.0.1'
+    //image
+    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0'
+    implementation 'com.facebook.fresco:fresco:2.6.0'//1.10.0
+
+    implementation "com.github.johnkil.android-robototextview:robototextview:$rootProject.robotoTextViewVersion"
+
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'//17.0.0//11.0.2
+    implementation "com.google.android.exoplayer:exoplayer:$rootProject.exoPlayerVersion"
+    implementation "com.timehop.stickyheadersrecyclerview:library:$rootProject.stickylistheadersVersion@aar"
+    implementation "com.github.bumptech.glide:glide:4.12.0"
+
+
+    //facebook
+    implementation 'com.facebook.android:facebook-login:12.1.0'
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    // Declare the dependency for the Analytics library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.google.firebase:firebase-core'
+    //implementation 'com.google.firebase:firebase-messaging'//18.0.0
+//    implementation 'com.google.firebase:firebase-core:20.0.0'//16.0.9//16.0.9
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'//18.0.0
+
+
+//    implementation 'com.google.firebase:firebase-dynamic-links:21.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links'
+
+    //new place picker sdk
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+
+
+    implementation 'id.zelory:compressor:2.1.0'
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+    //rate star
+    implementation 'com.github.ome450901:SimpleRatingBar:1.4.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //contact
+    implementation 'com.github.tamir7.contacts:contacts:1.1.7'
+
+
+    /*map utils for cluster*/
+    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
+    /*date and time picker*/
+    implementation project(':filepicker')
+    implementation project(':ColorDialog')
+    //implementation project(':library')
+    implementation project(path: ':ccp')
+    /*calender*/
+
+    ///caledar
+    implementation 'com.applandeo:material-calendar-view:1.5.0'
+    //implementation 'com.applandeo:material-calendar-view:1.9.0-rc03'
+
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+
+}
+apply plugin: 'com.google.gms.google-services'

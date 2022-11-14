@@ -1,0 +1,453 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <array name="funding_type">
+        <item>Select Type</item>
+        <item>Personal Capital</item>
+        <item>Private Capital</item>
+        <item>Other</item>
+    </array>
+    <array name="closing_time">
+        <item>Select Type</item>
+        <item>10 Days or Less</item>
+        <item>10-15 Days</item>
+        <item>15 – 30 Days</item>
+        <item>30+ Days</item>
+    </array>
+
+    <string name="os_message">Please share drive link for all data</string>
+    <!--<string name="server_client_id">1705334059-3quu0e33pun95lc47h4comf5lrf4f2fd.apps.googleusercontent.com</string>-->
+    <!--<string name="server_client_Secret_id">56pN35sAJHec__Qmgm2qhATn</string>-->
+
+    <!--Gmail-->
+    <!--<string name="server_client_id">721269325855-9ua5qhmbg0qaljavfuoolsfjpqqfgom2.apps.googleusercontent.com</string>-->
+    <!--<string name="server_client_id">721269325855-5gaiovg412dmnqupjem5pa7r9soip80q.apps.googleusercontent.com</string>-->
+    <!--Facebook-->
+    <string name="app_name">FlippBidd</string>
+
+    <string name="api_key">AIzaSyBc_J_YeSgQaawZ69wpGkvEy6L9vXNzaE8</string>
+    <string name="facebook_app_id">579653105714572</string>
+    <string name="fb_login_protocol_scheme">fb579653105714572</string>
+
+    <!--You have been invited to join a FlippBidd Chat to discuss a property.  Please download the App for IOS @ https://apple.co/335MnY7 and Android @ https://bit.ly/3eCsOc6 - Thank You-->
+    <string name="no_city_availabilityy">City not available! Please re-select state!</string>
+    <string name="no_internet">Please check your internet connection.</string>
+    <string name="string_share_sms_message">You have been invited to join a FlippBidd chat. \nPlease download the App for\n
+IOS @ https://apple.co/335MnY7\n
+ and Android @ https://bit.ly/3eCsOc6
+ \n- Thank You</string>
+
+
+    <!--Drawer Title-->
+    <string name="openDrawer">open</string>
+    <string name="closeDrawer">close</string>
+    <string name="String_title_home">Home</string>
+    <string name="String_title_myprofile">My Profile</string><!--Notification-->
+    <string name="String_title_findmydeal">Find My Deal</string><!--Notification-->
+    <string name="String_title_view_notification">View Notification</string><!--Notification-->
+    <string name="String_title_upload_property_notification">Property Upload</string><!--Notification-->
+    <string name="String_title_notification">Flippbidd Alerts</string>
+
+
+    <!--old design-->
+    <!--<string name="String_title_buysell">Buy/Sell</string>-->
+    <!--new design-->
+
+    <string name="String_title_mylikes">My Likes</string>
+    <string name="String_title_createfilter">Notification Filter</string>
+    <string name="rating_qst_title_message">Rate Property Admin, your review is important for Network.</string>
+    <string name="rating_qst_1">Professionalism</string>
+    <string name="rating_qst_2">Price/Fees</string><!--Fee/Price Points-->
+    <string name="rating_qst_3">Communication</string><!--Communication/Response-->
+    <string name="rating_qst_4">Property Knowledge</string><!--Property/Service Knowledge-->
+    <string name="rating_qst_5">Likely to Work with Again</string><!--Likely to Refer/Work With Again-->
+
+    <string name="String_title_my_calender">My Calender</string>
+    <string name="String_title_myuploaded">My Uploads</string>
+    <string name="String_rentals">Lending</string>
+    <!--<string name="String_title_purchase">Purchase -$4.99/Month</string>-->
+    <string name="String_services">Services</string>
+
+    <string name="String_title_logout">Logout</string>
+
+    <!--<string name="String_title_property">Property</string>-->
+    <string name="String_title_setting">Settings</string>
+    <string name="String_title_property">Properties</string>
+    <string name="String_property_not_available">This property is not available.</string>
+
+
+    <!--Cutstom Textview Fonts-->
+    <!--<enum name="font_bold" value="0" />
+            <enum name="font_light" value="1" />
+            <enum name="font_medium" value="2" />
+            <enum name="font_regular" value="3" />
+            <enum name="font_semi_bold" value="4" />-->
+    <string name="String_title_of_post_Servicer">Post Services</string>
+
+    <string name="String_title_of_edit_Servicer">Edit Services</string>
+    <string name="string_font">fonts/Poppins-Regular.ttf</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="string_trms"><![CDATA[<font color=#BCBCBC>By checking the Box you are agreeing to our</font>]]><b><u>\nTerms &amp; Privacy Policy</u></b></string>
+    <string name="sing_header_message">You\'re just one step away from signing up</string>
+    <string name="sing_header_message1">Bridging The Real Estate Community</string>
+    <string name="string_all_state">All State</string>
+    <string name="string_all_city">All City</string>
+    <string name="string_all_property_type">All Property</string>
+    <string name="string_all_bulidng_type">All Building</string>
+
+    <string name="string_all_service_type">All Service</string>
+    <string name="string_save">Save</string>
+
+    <string name="string_add_other">Add Another</string>
+    <string name="string_doc_driver_license">Driver License</string>
+    <string name="string_doc_w2">W2\'s</string>
+    <string name="string_doc_paystubs">Paystubs</string>
+    <string name="string_doc_bank_statements">Bank Statements</string>
+    <string name="string_doc_tax_return">Tax Returns</string>
+
+    <string name="string_doc_other">Other</string>
+
+
+    <string name="string_yes">Yes</string>
+
+    <string name="string_no">No</string>
+
+
+    <string name="string_Cancel">Cancel</string>
+    <string name="string_delete_message">Are you sure you want to delete property?</string>
+    <string name="string_unavailable_message">Are you sure you want to make this property unavailable?</string>
+
+
+    <string name="string_available_message">Are you sure you want to make this property available?</string>
+
+
+    <!--You Have No New Notifications-->
+    <string name="no_notification_mesg">You have no alerts.</string>
+    <string name="time_ago_prefix"></string>
+
+
+    <string name="time_ago_suffix">ago</string>
+    <string name="time_ago_seconds">less than a minute</string>
+    <string name="time_ago_minute">about a minute</string>
+    <string name="time_ago_minutes">%d minutes</string>
+    <string name="time_ago_hour">about an hour</string>
+    <string name="time_ago_hours">about %d hours</string>
+    <string name="time_ago_day">a day</string>
+    <string name="time_ago_days">%d days</string>
+    <string name="time_ago_month">about a month</string>
+    <string name="time_ago_months">%d months</string>
+    <string name="time_ago_year">about a year</string>
+    <string name="time_ago_years">%d years</string>
+
+    <string name="credit_mess">Credit \nRemaining</string>
+
+    <string name="string_subscription">Subscribe</string>
+
+    <string name="messages_limit_error">Oops! Property is still unavailable. Please wait for 24 hrs Time-clock to expire.</string>
+    <string name="messages_full_user">\t- Unlimited FlippBidd Credits\n
+                                      \t- Contact Information Sharing\n
+                                      \t- 24 Hour Countdown Clock</string>
+    <!--1.Oops! Your daily message limit is over..Please wait 24 hrs for Credits to renew or purchase Full Version to continue your chat
+        \n
+        \n
+        2.-->
+    <string name="messages_pro_user">\t-  Unlimited FlippBidd Credits\n
+                                      \t- Contact Information Sharing\n
+                                      \t- No Countdown Clock</string>
+
+    <string name="alert_delete_all_notification_message">Are you sure you want to clear all the notifications?</string>
+
+    <string name="alert_delete_notification_message">Are you sure you want to delete notification?</string>
+    <string name="string_success">Success</string>
+    <string name="string_advice_message">Please be advised that this chat is being monitored by our Administrator.  Any exchange or request for contact information i.e. phone number, email is a direct violation of our Terms/Conditions and may result in the termination of your subscription.</string>
+
+
+    <!--Dialog Messages-->
+    <string name="string_change_password_success">Change Password</string>
+    <string name="string_unsbcriber">Are you sure you want to Unsubscribe?</string>
+    <string name="string_payment">Make Payment</string>
+    <string name="string_error">Error</string>
+    <string name="string_no_internet_header">No Internet!</string>
+    <string name="string_ok">OK</string>
+    <string name="string_conform">Confirm</string>
+    <string name="string_continue">Continue</string>
+    <string name="string_success_property">Property Was Uploaded Successfully</string>
+    <string name="success_property">Property has been uploaded successfully</string>
+    <string name="string_quick_success_property">Property Was Uploaded Successfully, Please Add Another</string>
+    <string name="string_success_rental">Rental property added successfully</string>
+
+    <string name="string_edit_rental">Rental property updated successfully</string>
+    <string name="string_succes_service">Service added successfully</string>
+
+    <string name="string_edit_service">Service updated successfully</string>
+    <string name="string_notification_filter">Notification Filter</string>
+
+    <string name="string_notification_message">Are you sure you want to update notification filter ?</string>
+
+    <string name="string_re_select_file_error_message">File type not valid. Please select a valid file format.</string>
+
+
+    <string name="string__state_load_error_message">Something went wrong while loading state.</string>
+
+
+    <string name="dlg_loading">Loading</string>
+
+    <string name="error_connection">Connection failed. Please check your internet connection.</string>
+
+    <!--Error strings-->
+    <string name="error_response_timeout">No response received within reply timeout</string>
+    <string name="no_server_connection">Server connection timeout</string>
+
+    <!--Chat-->
+    <!-- Dialog -->
+    <string name="connection_error">Connection must be made</string>
+
+    <!-- Error -->
+
+    <!-- Settings -->
+    <string name="typing_status">Someone is Typing</string>
+
+    <!-- Group Channel List -->
+    <string name="group_channel_list_file_message_text">%1$s has uploaded a file.</string>
+    <string name="member_list">Members</string>
+    <string name="invite_member">Invite members</string>
+    <string name="request_leave_channel">Are you sure you want to leave: %s ?</string>
+    <string name="request_delete_channel">Are you sure you want to delete: %s ?</string>
+    <!--Are you sure you want to leave this group?-->
+    <string name="action_leave_channel">Leave</string>
+    <string name="option_delete_message">Delete message</string>
+
+    <!-- Group Chat -->
+    <string name="option_edit_message">Edit message</string>
+    <string name="action_send_message">SEND</string>
+    <string name="action_update_message">SAVE</string>
+    <string name="user_typing">%s is typing</string>
+    <string name="two_users_typing">%s and %s is typing</string>
+    <string name="users_typing"> Multiple users are typing</string>
+    <string name="request_external_storage">Storage access permissions are required to upload/download files.</string>
+    <string name="request_download_file">Download file?</string>
+    <string name="request_upload_doc_success_message">The Document has been saved to the Data Folder</string>
+
+    <string name="send_upload_message">Do you want to upload this document to the Data Folder?</string>
+    <string name="send_image_message">Do you want to upload this image to the Data Folder?</string>
+    <string name="wrong_file_info">Extracting file information failed.</string>
+
+    <string name="wrong_file_path">File must be located in local storage.</string>
+    <string name="request_retry_send_message">Retry?</string>
+
+    <!-- Member List -->
+
+    <!-- Menu actions -->
+    <string name="accept_permission">Okay</string>
+
+    <string name="download">Download</string>
+    <string name="cancel">Cancel</string>
+    <string name="call">Call</string>
+    <string name="upload">Upload</string>
+    <string name="resend_message">Resend</string>
+    <string name="delete_message">Delete</string>
+
+    <!-- Message Status -->
+    <string name="chat_message">You have no chats available. Create a chat by pressing the + button.</string>
+
+
+    <!--<string name="chat_message">You have no New Chat available. Start chat message by pressing the " + " button on top right corner.</string>-->
+    <string name="doc_expired_message">Proof Of Funds (Expires in 30 days)</string>
+
+    <!--   <string name="doc_expired_message">Your POF will be expire after 60 days so before that you have to update.</string>-->
+    <!--Your POF will expire in 30 days-->
+    <string name="property_address">Property Address  </string>
+
+    <string name="buyer_name">Buyer Name/Corp Name</string>
+    <string name="offer_amount">Offer Amount (in USD)</string>
+    <string name="down_payment">Down Payment (in USD)</string>
+    <string name="funding_type">Funding Type</string>
+    <string name="closing_time_frame">Closing Timeframe</string>
+    <!--10 Days or Less (Checkbox) 10-15 Days (Checkbox) 15 – 30
+    (Checkbox) 30+ Days (Checkbox)-->
+    <string name="purchasing">Purchasing “AS IS” Condition</string>
+
+    <string name="attorney_name">Escrow/Title/Attorney</string><!--Title/Attorney Name-->
+    <string name="attorney_firm_name">Contact Person</string>
+    <string name="attorney_firm_number">Phone Number</string>
+    <string name="attorney_fax_number">Fax Number</string>
+    <string name="attorney_email">Email Address</string>
+    <string name="attorney_address">Office Address</string>
+    <string name="attorney_contingencies">Notes</string>
+    <string name="first_name">First Name</string>
+    <string name="upload_pof_">Proof of Funds (Optional)</string>
+    <string name="last_name">Last Name </string>
+    <string name="mobile_number">Phone Number </string>
+
+    <string name="terms"><b>The Buyer/Corporation has done their complete
+due diligence on the above mentioned property,
+does not have any further questions pertaining
+to the property, agrees that all offers are final and
+does not have the right to negotiate the purchase
+price and/or fees once the contract is requested.
+</b></string>
+    <string name="terms1"><b>I affirm and certify that all the information and answers
+herein are complete, true and correct. I understand that
+any misrepresentation or falsification of any information
+may render this Letter of Intent to Purchase Real Estate
+void.
+</b></string>
+    <string name="string_property_bidd_header">What would you pay for this Property?</string>
+
+    <string name="string_property_action_restriction">You are the Property Admin</string>
+
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+
+    <string name="support_message">We\'d love to get feedback from you on our app. The more details you can provide, the better.</string>
+    <string name="today_data_message">What would you like to do today?</string>
+
+    <string name="intro_1">View all available properties and manage your search filters</string>
+
+
+    <string name="intro_2">Access your FlippBidd user preferences and content.</string>
+    <string name="intro_3">View all properties on the FlippBidd map view.</string>
+
+
+    <!--<string name="intro_4">Locate properties nearby your current location.</string>-->
+    <string name="intro_4">Check your calendar for upcoming audio and video calls.</string>
+    <string name="intro_5">Upload your properties and showcase them to our community of buyers and investors.</string>
+<!--    <string name="intro_5">Check all your existing messages and create new chats with other FlippBidd users.</string>-->
+    <string name="intro_6">Get exclusive access to real estate investments, documents and contracts.</string>
+    <string name="intro_7">Filter your search results based on your specific search criteria.</string>
+    <string name="intro_9">Show our users that you\'re interested.  When the price drops you\'ll get a LIVE Notification.</string>
+    <string name="intro_10">Message the property admin, view property data, request contracts, place bid\'s, share property and More!</string>
+    <string name="intro_11">Let the user know what you\'re willing to pay and get a LIVE Notification when the price drops.</string>
+    <string name="intro_14">Share property data such as pictures, videos and documents with other FlippBidd users.</string>
+    <string name="intro_15">Request contracts directly from owners, brokers and wholesalers.</string>
+    <string name="intro_16">Audio/Video meetings can be scheduled with other user as well as access to their properties.</string>
+    <string name="chat_rule_message">Are you sure you want to send this chat rule in message ?</string>
+    <string name="upload_pof">Upload POF</string>
+    <string name="request_contract">Request Contract</string>
+
+    <string name="message_of_find_my_deal_upload">Would you like to be notified when this property is found?</string>
+
+    <string name="message_of_find_my_deal_upload_sucessfull">Your search request was submitted %d members of the Flippbidd Network.</string>
+    <string name="contact_sync_message_header">Flippbidd - Bridging the Real Estate Community.</string>
+    <string name="contact_sync_message">FlippBidd will need to access and sync your contacts list in your phone to allow in-app user to user chat messaging.  Your personal data will not be accessed, shared, used or distributed.</string>
+    <string name="accept_alert_bidd_message">Are you sure you want to accept this Bidd?</string>
+    <string name="counter_alert_bidd_message">What is your counter offer?</string>
+    <string name="reject_alert_bidd_message">Are you sure you want to reject this Bidd?</string>
+
+    <string name="request_data">Request Data</string>
+    <string name="view_request_data">View Data Requests</string>
+    <string name="view_request_message">Requested %s</string>
+    <string name="request_data_message_header">Please select the documents that you are requesting.</string>
+    <string name="app_update_message">FlippBidd %s is now available.\nPlease update your app to access new features</string>
+    <string name="app_update_remind_me_later">Remind me later</string>
+
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="title_activity_app_update">FlippBidd Update</string>
+
+    <string name="title_activity_request_call_list">Calendar Activities</string>
+    <string name="first_fragment_label">Calendar Activities</string>
+    <string name="second_fragment_label">My Calendar</string>
+    <string name="next">Next</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string-array name="montserrat">
+        <item>Poppins-Bold.ttf</item>
+        <item>Poppins-Light.ttf</item>
+        <item>Poppins-Medium.ttf</item>
+        <item>Poppins-Regular.ttf</item>
+        <item>Poppins-SemiBold.ttf</item> <!--Default: 1-->
+
+    </string-array>
+
+    <string-array name="rate_array">
+        <item>Hourly</item>
+        <item>Daily</item>
+        <item>Per Job</item>
+        <item>Points</item>
+        <item>Percentage</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="area_array">
+        <item>Acres</item>
+        <item>Hectares</item>
+        <item>Sq. Mt</item>
+        <item>Sq. Yard</item>
+        <item>Sq. Feet</item>
+        <item>Bighas</item>
+    </string-array>
+
+    <string name="user_name_with_message">%s requested a %s for %s on %s at %s to %s</string>
+    <string name="login_user_name_with_message">You have requested a %s for %s on %s at %s to %s</string>
+    <string name="accept_alert_request_message">Are you sure you want to accept this request?</string>
+    <string name="new_alert_rrequest_message">Are you sure you want to request a New time?</string>
+    <string name="reject_alert_request_message">Are you sure you want to reject this request?</string>
+
+    <string name="cal_event_with_date_messages"><![CDATA[<font color=#000000><b>%s Meeting with %s </b></font><font color=#BCBCBC>for %s scheduled on %s at %s to %s</font>]]></string>
+    <string name="cal_event_without_date_messages"><![CDATA[<font color=#000000><b>%s Meeting with %s </b></font><font color=#BCBCBC>for %s %s to %s</font>]]></string>
+
+
+    <!--call sendbird-->
+    <string name="calls_notification_voice_calling_content">Voice call from %s</string>
+    <string name="calls_notification_video_calling_content">Video call from %s</string>
+    <string name="calls_notification_accept">Accept</string>
+    <string name="calls_notification_decline">Decline</string>
+    <string name="calls_notification_end">End</string>
+
+    <string name="calls_empty_nickname">—</string>
+    <string name="calls_user_id_format">User ID: %s</string>
+    <string name="calls_and_character">" · "</string>
+    <string name="calls_muted_this_call">%s is muted</string>
+    <string name="calls_incoming_voice_call">incoming voice call&#8230;</string>
+    <string name="calls_incoming_video_call">incoming video call&#8230;</string>
+    <string name="calls_connecting_call">connecting&#8230;</string>
+    <string name="calls_calling">making voice call&#8230;</string>
+    <string name="calls_video_calling">making video call&#8230;</string>
+    <string name="calls_ending_voice_call">voice call ending&#8230;</string>
+    <string name="calls_ending_video_call">video call ending&#8230;</string>
+
+    <string name="calls_end_result_no_answer">No answer</string>
+    <string name="calls_end_result_canceled">Canceled</string>
+    <string name="calls_end_result_declined">Declined</string>
+    <string name="calls_end_result_completed">Ended</string>
+    <string name="calls_end_result_timed_out">Timed out</string>
+    <string name="calls_end_result_connection_lost">Connection lost</string>
+    <string name="calls_end_result_unknown">Unknown</string>
+    <string name="calls_end_result_accept_failed">Accept failed</string>
+    <string name="calls_end_result_dial_failed">Dial failed</string>
+    <string name="calls_end_result_other_device_accepted">Other device accepted</string>
+    <string name="calls_invalid_deep_link">Invalid deep link</string>
+    <string name="calls_deep_linking_to_authenticate_failed">Could not authenticate deep link.</string>
+    <string name="calls_invalid_notifications_setting_in_dashboard">Turn on notifications on the Sendbird dashboard to allow mobile sign in.</string>
+
+    <!--    <string name="request_new_from_admin_alert">Are you sure want to request new meeting time as %s %s-%s?</string>-->
+
+    <!--new request time message and alert-->
+    <string name="request_new_from_admin_alert">You are suggesting a new time for the %s at %s %s-%s?</string>
+    <string name="user_name_request_new_time_with_message">%s has requested a new time for %s for %s on %s at %s to %s</string>
+    <string name="login_user_name_request_new_time_with_message">You have suggested new time for %s for %s on %s at %s to %s</string>
+
+    <!---->
+
+    <string name="get_access_property">I was able to get access to the property</string>
+    <string name="connect_property_admin">I was able to connect with Property Admin</string>
+    <string name="feedback_terms">Please be advised as per FlippBidd terms/conditions you are asked not exchange contact information i.e Emails, Phone Numbers until you are ready to Request Contract. Violating these terms can result in termination of your FlippBidd subscription.</string>
+
+
+    <string name="direct_call_alert_popup_message">Scheduled %s with <b>%s</b> for <b>%s</b> starting now.</string>
+
+    <string name="welcome_user_pro_purchase_header">Welcome %s, LET\'S DO THIS!</string>
+    <string name="plan_title">%s\n%s%s/%s</string>
+
+    <string name="alert_message_1">You have reached the messaging limit for this chat. Please schedule a call request with this user.</string>
+    <string name="alert_message_2">You have reached the messaging limit for this chat. Please upgrade to the Pro Version.</string>
+    <!--    <string name="alert_message_3">You have reached the monthly limit for meetings on FlippBidd. Please upgrade to the Pro Version.</string>-->
+    <!--    <string name="alert_message_3">You have reached the 5 Audio/Video monthly request limit for meetings on your full license.  please upgrade to the Pro version..</string>-->
+    <string name="alert_message_3">You have reached the 5 Audio/Video monthly request limit. Please upgrade to the pro version.</string>
+
+    <string name="people_counts"> + %s people</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="investor_name">Investors Lists</string>
+    <string name="fix_hold"><![CDATA[Fix & Hold]]></string>
+    <string name="flip_flip"><![CDATA[Flip & flip]]></string>
+</resources>

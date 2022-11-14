@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/lableView"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txt_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textFontWeight="600"
+                android:padding="10dp"
+                android:text="@string/accept_alert_bidd_message"
+                android:lineSpacingExtra="12sp"
+                android:gravity="center"
+                app:font_type="font_semi_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"/>
+
+            <com.flippbidd.CustomClass.CustomEditText
+                android:id="@+id/editPriceBox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:background="@drawable/common_ract"
+                android:textFontWeight="400"
+                android:layout_below="@+id/txt_03"
+                android:hint="Price in USD"
+                android:padding="10dp"
+                android:lineSpacingExtra="10sp"
+                android:gravity="center_vertical"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:font_type="font_medium"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_above="@+id/llActionBox"/>
+
+        <LinearLayout
+            android:layout_below="@+id/lableView"
+            android:id="@+id/llActionBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txt_01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawablePadding="10dp"
+                android:padding="15dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/text_color_dark_grey_"
+                android:textFontWeight="600"
+                app:font_type="font_bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txt_02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textFontWeight="600"
+                app:font_type="font_semi_bold" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

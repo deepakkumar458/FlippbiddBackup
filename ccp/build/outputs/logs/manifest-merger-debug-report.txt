@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml:1:1-32
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml:1:1-32
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml:1:1-32
+	package
+		ADDED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml:1:11-30
+		INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+		INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml:1:1-32
+uses-sdk
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+		ADDED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+		INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+		ADDED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml
+		INJECTED from E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\AndroidManifest.xml

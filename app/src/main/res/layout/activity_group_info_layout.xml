@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ab_gradient">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <ImageView
+                    android:id="@+id/expandedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlCoverUpdate"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:backgroundTint="#dddddd"
+                        android:background="@drawable/circular_button">
+
+                        <ImageView
+                            android:id="@+id/ivUpdateGroupCover"
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_5sdp"
+                            app:tint="@color/black"
+                            android:src="@mipmap/camera" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlOPenPropertyDetails"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:visibility="gone"
+                        android:backgroundTint="#dddddd"
+                        android:background="@drawable/circular_button">
+
+                        <ImageView
+                            android:id="@+id/ivPropertyInfo"
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/property_info"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/Toolbar"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/ivGroupInfoBackView"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:rotation="180"
+                    app:tint="@color/white"
+                    android:src="@drawable/back_arrow"/>
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Group Info"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15sdp"/>
+
+                <ImageView
+                    android:id="@+id/ivMeetingSchedule"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_calendar"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tvGName"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvEditName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:textColor="@color/color_black"
+                android:text="New Year property"
+                android:textSize="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tvEditName"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_white"
+                android:textColor="@color/colorAccent"
+                android:text="Edit"
+                android:visibility="gone"
+                android:textSize="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"
+                app:font_type="font_bold"/>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:background="#F0EFEF" />
+
+        <RelativeLayout
+            android:id="@+id/relativeDataFolderBox"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/relativeLOIRequestBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:textColor="@color/color_black"
+                android:text="Property Data Folder"
+                android:textSize="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp" />
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/relativeLOIRequestBox"-->
+<!--                android:visibility=""-->
+<!--                android:layout_width="@dimen/_50sdp"-->
+<!--                android:layout_marginRight="@dimen/_5sdp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/common_ract"-->
+<!--                android:backgroundTint="@color/colorPrimary">-->
+
+                <ImageView
+                    android:id="@+id/relativeLOIRequestBox"
+                    android:layout_toLeftOf="@+id/relativeFilesUploadBox"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/button_white_gradient"
+                    android:backgroundTint="@color/red"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_contract" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/iconLOIRequest"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_35sdp"-->
+<!--                    android:padding="@dimen/_7sdp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:src="@drawable/ic_contract" />-->
+
+<!--            </RelativeLayout>-->
+
+            <ImageView
+                android:id="@+id/relativeFilesUploadBox"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/button_white_gradient"
+                android:backgroundTint="@color/text_color_dark_grey_"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/folder" />
+            <!--<RelativeLayout
+                android:id="@+id/relativeFilesUploadBox"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_ract"
+                android:backgroundTint="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/iconFileUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline" />
+
+            </RelativeLayout>-->
+
+
+        </RelativeLayout>
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tvTotalMemberCounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total participants: 2"
+            android:textColor="@color/color_black"
+            android:background="#F0EFEF"
+            android:textSize="@dimen/_12sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/viewSearchBoxLine"
+            android:id="@+id/rlCreateNewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp">
+
+            <ImageView
+                android:id="@+id/ivNewGroupChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:src="@drawable/g_create" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivNewGroupChat"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:text="Add Participants"
+                android:textColor="#275481"
+                android:textSize="@dimen/_13sdp" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#F0EFEF" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvMemberList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"
+            android:background="#F0EFEF" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/btnLeaveGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_13sdp"
+            android:text="Leave Group"
+            android:textColor="@color/red"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#F0EFEF"/>
+
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

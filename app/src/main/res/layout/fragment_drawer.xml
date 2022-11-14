@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ab_gradient">
+
+    <RelativeLayout
+        android:id="@+id/relUserIDView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            style="@style/TextViewMediumWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Menu"
+            android:textSize="@dimen/_15sdp"
+            app:font_type="font_bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/len_drawer_user_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relUserIDView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/drawerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeSubmitProperty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/len_drawer_user_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/button_box"
+        android:backgroundTint="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageSubmitProperty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_white_cloud_upload"
+                app:tint="@color/color_black" />
+
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tv_sell_my_deal"
+                style="@style/TextViewMediumDark"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="Sell My Deal"
+                android:textSize="@dimen/_14sdp"
+                app:font_type="font_bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/tvUpgradeToProLic"
+        style="@style/TextViewMediumWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeSubmitProperty"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Upgrade to Pro License"
+        android:textColor="#FF8F0D"
+        android:textSize="@dimen/_17sdp"
+        app:font_type="font_semi_bold" />
+
+    <!-- <RelativeLayout
+         android:id="@+id/relativeFundMyDeal"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/_40sdp"
+         android:layout_below="@+id/relativeSubmitProperty"
+         android:layout_centerInParent="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginHorizontal="@dimen/_20sdp"
+         android:background="@drawable/button_with_border_gradian">
+
+         <ImageView
+             android:id="@+id/imageFundMyDeal"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/_30sdp"
+             android:scaleType="center"
+             android:src="@drawable/fundmydeal" />
+
+
+         <com.flippbidd.CustomClass.CustomTextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:layout_toRightOf="@+id/imageFundMyDeal"
+             android:background="@android:color/transparent"
+             android:paddingLeft="@dimen/_10sdp"
+             android:paddingTop="@dimen/_10sdp"
+             android:paddingRight="@dimen/_15sdp"
+             android:paddingBottom="@dimen/_10sdp"
+             android:text="Fund My Deal"
+             android:textColor="@color/color_white"
+             android:textSize="@dimen/_14sdp"
+             app:font_type="font_bold" />
+
+     </RelativeLayout>-->
+
+    <include layout="@layout/layout_progress_dialog" />
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.RequestCallListFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageRequestCallListBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:tint="@color/color_black"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtHeaderMyCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:text="@string/title_activity_request_call_list"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_gravity="right"
+                android:gravity="right">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageBellIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_notifications"
+                    android:visibility="gone"
+                    app:tint="@color/color_black" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tvNotificationView"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_ellipses"/>
+                <!--   <com.google.android.material.textview.MaterialTextView
+                       android:id="@+id/tvNotificationCounts"
+                       android:layout_width="@dimen/_16sdp"
+                       android:layout_height="@dimen/_16sdp"
+                       android:text="0"
+                       android:visibility=""
+                       android:textAlignment="center"
+                       android:textColor="@color/colorWhite"
+                       android:layout_alignParentRight="true"
+                       android:backgroundTint="@color/color_black"
+                       android:textSize="@dimen/_8sdp"
+                       android:padding="@dimen/_2sdp"
+                       android:background="@drawable/circular_button"/>-->
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <include layout="@layout/content_request_call_list" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

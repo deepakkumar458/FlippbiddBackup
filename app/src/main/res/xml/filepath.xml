@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path
+        name="external_files"
+        path="." />
+    <external-path name="my_docs" path="./document"/>
+    <external-path name="my_images" path="Android/data/com.example.captureimage/files/Pictures" />
+</paths>
+<!--<external-path name="pictures" path="Pictures/" />-->

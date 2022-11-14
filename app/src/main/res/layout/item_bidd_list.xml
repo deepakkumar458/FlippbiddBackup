@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.flippbidd.CommonClass.CircleImageView
+            android:id="@+id/imageBiddUser"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@mipmap/user"
+            app:civ_border_color="#3A6E9E"
+            app:civ_border_width="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtBiddByName"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageBiddUser"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Urmil malhotra"
+            android:textColor="@color/text_color_dark_grey"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toEndOf="@+id/imageBiddUser"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearStatusActionBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageActionAccept"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/accept" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageActionCountered"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:src="@drawable/countered" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageActionReject"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/reject" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tvBiddMaterialStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearStatusActionBox"
+                android:padding="@dimen/_5sdp"
+                android:text="$20000"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_black"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:font_type="font_semi_bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@id/txtBiddByName">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtBidPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:text="$520000"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="font_bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageaudiocall"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/audio_call_border" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imagevideocall"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/video_call_border" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

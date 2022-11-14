@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\RachanaProjects\flippbidd_16_04_2022 (1)\flippbidd_16_04_2022\flippbidd\ccp\src\debug\jniLibs"/></dataSet></merger>

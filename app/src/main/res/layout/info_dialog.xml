@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF000000"
+        android:alpha="0.5"/>
+
+    <!--menu-->
+    <RelativeLayout
+        android:id="@+id/relativeMenuItem"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/intro_circle"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            app:tint="@color/color_black"
+            android:src="@mipmap/menu" />
+
+    </RelativeLayout>
+
+    <!--list-->
+    <RelativeLayout
+        android:id="@+id/relativePropertyList"
+        android:visibility="gone"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/intro_circle"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/closeDialogImg"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            app:tint="@color/color_black"
+            android:src="@drawable/ic_list" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp"
+            android:textFontWeight="400"
+            android:lineSpacingExtra="@dimen/_4sdp"/>
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtGOTIT"
+            android:layout_below="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:text="GOT IT"
+            android:textColor="@color/quantum_orange"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="?attr/actionBarSize">
+            <!--Map-->
+            <RelativeLayout
+                android:id="@+id/relativeMapView"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/intro_circle">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    app:tint="@color/color_black"
+                    android:src="@drawable/ic_earth" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="?attr/actionBarSize">
+            <!--My Map-->
+            <RelativeLayout
+                android:id="@+id/relativeMyMapView"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/intro_circle">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    app:tint="@color/color_black"
+                    android:src="@drawable/ic_calendar" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="?attr/actionBarSize">
+            <!--Chat-->
+            <RelativeLayout
+                android:id="@+id/relativeChatView"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/intro_circle">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    app:tint="@color/color_black"
+                    android:src="@drawable/ic_white_cloud_upload" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="?attr/actionBarSize">
+            <!--Upload-->
+            <RelativeLayout
+                android:id="@+id/relativeUploadView"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/intro_circle">
+
+                <ImageView
+                    android:id="@+id/imageMyUploadView"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    app:tint="@color/color_black"
+                    android:src="@drawable/portalblack" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:id="@+id/txtHeaderWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_23sdp"
+        android:textFontWeight="400"
+        android:text="Welcome to Flippbidd!"
+        android:lineSpacingExtra="@dimen/_4sdp"/>
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "721269325855",
+    "firebase_url": "https://flippbidd-214612.firebaseio.com",
+    "project_id": "flippbidd-214612",
+    "storage_bucket": "flippbidd-214612.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721269325855:android:8a12be9b6c9520de",
+        "android_client_info": {
+          "package_name": "com.flippbidd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721269325855-hcate9gc3pr43ev9r3uskuquq6oduoqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flippbidd",
+            "certificate_hash": "91d0198a882b6e1db7f928965dd642dfb248e72c"
+          }
+        },
+        {
+          "client_id": "721269325855-me1hu2iv0ntck071193cmo3ejcv6d4t3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flippbidd",
+            "certificate_hash": "abe4617e2a452f92706d77b2b3e19c1271b0f1c7"
+          }
+        },
+        {
+          "client_id": "721269325855-6l1m69vkcsfs2eh8e0bdr2nkr56ov4sd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQHFsP5W-jL9ozDNMcUO4WWDTTQpAEttU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721269325855-6l1m69vkcsfs2eh8e0bdr2nkr56ov4sd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

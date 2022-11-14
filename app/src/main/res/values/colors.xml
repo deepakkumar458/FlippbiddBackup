@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black_trans80">#55000000</color><!--33000000-->
+
+    <color name="colorPrimary">#41B0DD</color>
+    <color name="colorPrimaryDark">#3FA3D1</color>
+    <color name="colorAccent">#41B0DD</color>
+    <color name="screen_bg">#FFF</color><!--E9E9EF-->
+    <color name="icon_color">#1E3952</color>
+    <color name="Gray">#636363</color>
+    <color name="green_color">#1bbc9b</color>
+    <color name="grey_font">#BCBCBC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#232323</color>
+    <color name="red">#ff0000</color>
+<color name="orange">#D7651A</color>
+    <color name="callBackground">#2c2c2c</color>
+    <!--<color name="sky">#336793</color>-->
+    <color name="sky">#3C8BBA</color>
+    <color name="light_gray">#F8F8F7</color>
+    <color name="marron">#d44837</color>
+    <color name="light_Blue">#0277b6</color>
+    <color name="yellow">#f0c409</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="line_color">#5C86BF</color>
+    <color name="tint_color">#393939</color>
+
+    <color name="colorTextViewPrimary">#3A3A3A</color>
+    <color name="titleText">#0E0E0E</color>
+    <color name="subTitleText">#BCBCBC</color>
+    <color name="filer_boordr">#EBEBEB</color>
+
+    <color name="colorTextViewSetting">#a5a5a5</color>
+    <color name="tvHintGrayColor">#dddddd</color>
+
+    <color name="color_create_chat">#275481</color>
+
+
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="chef">#777</color>
+
+    <color name="bg_color">#FFF</color>
+    <color name="dark_font_color">#E38C3F</color>
+    <color name="regular_font_color">#8D8D8D</color>
+    <color name="contact_font_color">#6956E4</color>
+
+    <color name="navigation_bg_color">#FFFFFF</color>
+    <color name="item_unselected">#393939</color>
+    <color name="item_selected">#FF8F0D</color>
+
+
+    <color name="color_light_blue_qb">#87cefa</color>
+    <color name="color_grey">#d3d3d3</color>
+    <!--    <color name="color_search_hint">#6C7A92</color>-->
+
+    <color name="color_blue_qb">#046ad0</color>
+    <color name="selected_border">#2B79A8</color>
+
+    <color name="dark_gray">#6c6c6c</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_black">#000000</color>
+    <color name="text_color_medium_grey">#b1b1b1</color>
+    <color name="text_color_dark_grey">#6e6e6e</color>
+    <color name="text_color_dark">#393939</color>
+<!--    <color name="text_color_dark_grey_">#1E568B</color>-->
+    <color name="text_color_dark_grey_">#2B79A8</color>
+
+
+    <!--chat-->
+    <!-- Group Chat -->
+    <color name="groupChatBubbleMe">#EDE8E8</color>
+    <color name="groupChatTextMe">#000000</color>
+    <color name="groupChatBubbleOther">#C7E5F7</color>
+    <color name="groupChatTextOther">#000000</color>
+
+    <!--e0fcff-->
+
+    <color name="groupChatDateText">#ffffff</color>
+    <color name="groupChatDateBackground">#C0C0C0</color>
+
+    <!-- Group Channel List -->
+    <color name="groupChannelUnreadCountBackground">#41B0DD</color>
+    <color name="groupChannelUnreadCountText">#ffffff</color>
+
+    <!-- Selector -->
+    <color name="btn_send">#774df2</color>
+    <color name="btn_send_disabled">#8e8e8e</color>
+
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+
+</resources>

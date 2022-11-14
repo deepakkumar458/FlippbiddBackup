@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF000000"
+        android:alpha="0.5"/>
+
+    <!--menu-->
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_4sdp"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/intro_circle"
+        android:layout_toLeftOf="@+id/relativeSort">
+
+        <ImageView
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:tint="@color/color_black"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+    <!--menu-->
+    <RelativeLayout
+        android:id="@+id/relativeSort"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/intro_circle"
+        android:layout_toLeftOf="@+id/relativeFilter">
+
+        <ImageView
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:tint="@color/color_black"
+            android:src="@drawable/sort" />
+
+    </RelativeLayout>
+
+    <!--list-->
+    <RelativeLayout
+        android:id="@+id/relativeFilter"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/intro_circle"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/closeDialogImg"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            android:tint="@color/color_black"
+            android:src="@drawable/new_filter" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp"
+            android:textFontWeight="400"
+            android:lineSpacingExtra="@dimen/_4sdp"/>
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtGOTIT"
+            android:layout_below="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:text="GOT IT"
+            android:textColor="@color/quantum_orange"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tv_menu_bottom_sheet_header_title"
+                style="@style/TextViewMediumDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/medium_size"
+                android:hint="User Name"
+                android:textColor="@color/text_color_medium_grey"
+                android:gravity="center"
+                app:font_type="font_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_menu_bottom_sheet_voice_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageAudioCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/audio_call"/>
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/tv_menu_bottom_sheet_voice_call"
+                        style="@style/TextViewMediumDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/medium_size"
+                        android:text="Audio Call"
+                        android:textColor="@color/colorAccent"
+                        app:font_type="font_regular" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_menu_bottom_sheet_video_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageVideoCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/video_call"/>
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/tv_menu_bottom_sheet_video_call"
+                        style="@style/TextViewMediumDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:padding="@dimen/medium_size"
+                        android:text="Video Call"
+                        android:textColor="@color/colorAccent"
+                        app:font_type="font_regular" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_menu_bottom_sheet_view_profile"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/_9sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/profile"/>
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/tv_menu_bottom_sheet_view_profile"
+                        style="@style/TextViewMediumDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/medium_size"
+                        android:text="View Profile"
+                        android:textColor="@color/colorAccent"
+                        app:font_type="font_regular" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tv_menu_bottom_sheet_cancel"
+            style="@style/TextViewMediumDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="@dimen/medium_size"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            app:font_type="font_bold" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

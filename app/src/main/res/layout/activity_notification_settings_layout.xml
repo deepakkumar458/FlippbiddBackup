@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChatNotificationSettings"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_white"
+        android:elevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageBackIcon"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:rotation="180"
+                app:tint="@color/color_black"
+                android:src="@drawable/back_arrow" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/imageBackIcon"
+                android:text="Notification Settings"
+                android:textColor="@color/text_color_black"
+                android:padding="@dimen/_7sdp"
+                android:textSize="@dimen/_15sdp"
+                app:font_type="font_regular"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12sdp"
+            android:thumb="@drawable/swith_thumb"
+            app:switchPadding="@dimen/_5sdp"
+            app:track="@drawable/switch_track" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Chat"
+            android:textColor="#363169"
+            android:textSize="@dimen/_14sdp"
+            app:font_type="font_regular"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchFindMyDeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12sdp"
+            android:thumb="@drawable/swith_thumb"
+            app:switchPadding="@dimen/_5sdp"
+            app:track="@drawable/switch_track" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/String_title_findmydeal"
+            android:textColor="#363169"
+            android:textSize="@dimen/_14sdp"
+            app:font_type="font_regular"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/ViewNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12sdp"
+            android:thumb="@drawable/swith_thumb"
+            app:switchPadding="@dimen/_5sdp"
+            app:track="@drawable/switch_track" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/String_title_view_notification"
+            android:textColor="#363169"
+            android:textSize="@dimen/_14sdp"
+            app:font_type="font_regular"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/uploadPropertyNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12sdp"
+            android:thumb="@drawable/swith_thumb"
+            app:switchPadding="@dimen/_5sdp"
+            app:track="@drawable/switch_track" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/String_title_upload_property_notification"
+            android:textColor="#363169"
+            android:textSize="@dimen/_14sdp"
+            app:font_type="font_regular"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPushTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_ab_gradient"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:paddingHorizontal="@dimen/_45sdp"
+        android:text="Push Notification Test"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_regular"/>
+
+
+</LinearLayout>

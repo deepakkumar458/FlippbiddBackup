@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/viewToolbar"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_5sdp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/image_toolbar"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_5sdp"
+            android:rotation="180"
+            app:tint="@color/color_black"
+            android:src="@drawable/back_arrow"/>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txt_title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Submit Property"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/_15sdp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Contact Name"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewContactName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Contact Name"
+                        android:maxLength="50"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Contact Phone Number"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewContactPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Contact Phone Number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imageViewEditebaleIcon"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Property Address"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_regular" />
+
+
+                    <ImageView
+                        android:id="@+id/imageViewSelectAddress"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:src="@drawable/ic_location" />
+
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/tvSearchGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imageViewSelectAddress"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Search Google"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_regular" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewPropertyAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="left"
+                        android:hint="Property Address"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPriceBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Price"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="$0"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Units"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <RelativeLayout
+                    android:id="@+id/relativePropertySelectUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/editTextViewUnits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imageSelectUnits"
+                        android:hint="Select"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageSelectUnits"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/ddown" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSelectUnits"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_height="0dp"
+                        android:layout_alignParentBottom="true"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"></Spinner>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Bed Nos."
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <RelativeLayout
+                    android:id="@+id/relativePropertySelectBeds"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/editTextViewBedsNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imageSelectBedsNo"
+                        android:hint="Select"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageSelectBedsNo"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/ddown" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSelectBedsNo"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_height="0dp"
+                        android:layout_alignParentBottom="true"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"></Spinner>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Bath Nos."
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <RelativeLayout
+                    android:id="@+id/relativePropertySelectBath"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/editTextViewBathNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imageSelectBathNo"
+                        android:hint="Select"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/titleText"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="font_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageSelectBathNo"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/ddown" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSelectBathNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_alignParentBottom="true"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"></Spinner>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Area(Only in Sq. ft)"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/common_ract"
+                        android:backgroundTint="@color/filer_boordr"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Vacant"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioVacantGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioVacantYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/custom_radio_btn"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Yes"
+                            android:checked="true"
+                            android:textColor="@color/Gray" />
+
+                        <RadioButton
+                            android:id="@+id/radioVacantNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/custom_radio_btn"
+                            android:padding="@dimen/_5sdp"
+                            android:text="No"
+                            android:textColor="@color/Gray" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Notes"
+                    android:textColor="@color/titleText"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="font_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/filer_boordr">
+
+                    <com.flippbidd.CustomClass.CustomEditText
+                        android:id="@+id/editTextViewAddNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="left"
+                        android:hint="Add Notes"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_weight="0.5">
+
+
+                    <!--                    android:layout_margin="@dimen/_10sdp"-->
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutUploadImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/ab_gradient">
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/btnUploadImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imagePick"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:singleLine="true"
+                            android:text="Take Picture"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <ImageView
+                            android:id="@+id/imagePick"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/camera" />
+
+                        <ImageView
+                            android:id="@+id/imagesSelected"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_weight="0.5">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutDocUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:background="@color/Gray">
+
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/btnUploadDocuments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageUploadDoc"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="Upload Documents"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <ImageView
+                            android:id="@+id/imageUploadDoc"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:src="@mipmap/upload" />
+
+                        <ImageView
+                            android:id="@+id/imagesDocSelected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pdf"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_10sdp">
+
+                <com.flippbidd.CustomClass.CustomAppCompatButton
+                    android:id="@+id/btnRequestPropertySubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/text_color_dark_grey_"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_progress_dialog" />
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressEdit"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"/>
+</RelativeLayout>

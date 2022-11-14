@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--android:background="@color/color_light_blue_qb"-->
+    <RelativeLayout
+        android:id="@+id/relativeMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.flippbidd.CommonClass.CircleImageView
+            android:id="@+id/ivUserProfileView"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/profile_thumbnail"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvUserProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvUserUpdateDate"
+            android:layout_toRightOf="@+id/ivUserProfileView"
+            android:text="User Name"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvUserUpdateDate"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10/07/2021"
+            android:textColor="@color/colorTextViewPrimary"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_regular"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRequestDocumentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUserProfileName"
+            android:layout_toRightOf="@+id/ivUserProfileView"
+            android:text="User Name"
+            android:textColor="@color/colorTextViewPrimary"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

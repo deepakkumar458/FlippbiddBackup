@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_new_design_property_details_layout">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF000000"
+        android:alpha="0.5"/>
+
+    <!--my calendar-->
+    <RelativeLayout
+        android:layout_toRightOf="@+id/relativeData"
+        android:id="@+id/relativeMyCalendar"
+        android:visibility="invisible"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:background="@drawable/intro_circle">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:tint="@color/color_black"
+            android:src="@drawable/call_shadow_android" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeBidd"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/_365sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:background="@drawable/intro_circle">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:tint="@color/color_black"
+            android:src="@drawable/ic_bidd" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/relativeBidd"
+        android:id="@+id/relativeData"
+        android:visibility="invisible"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/_365sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:background="@drawable/intro_circle">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:tint="@color/color_black"
+            android:src="@drawable/folder" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/relativeData"
+        android:id="@+id/relativeContract"
+        android:visibility="invisible"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/_365sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:background="@drawable/intro_circle">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:tint="@color/color_black"
+            android:src="@drawable/ic_contract" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp"
+            android:text="message"
+            android:textFontWeight="400"
+            android:lineSpacingExtra="@dimen/_4sdp"/>
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/txtGOTIT"
+            android:layout_below="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:text="GOT IT"
+            android:textColor="@color/quantum_orange"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

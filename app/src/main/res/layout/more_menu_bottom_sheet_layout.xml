@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:alpha="0.8"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tv_menu_bottom_sheet_browser_files"
+                style="@style/TextViewMediumDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/medium_size"
+                android:text="Browse Files"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                app:font_type="font_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_gray"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tv_menu_bottom_sheet_upload_link"
+                style="@style/TextViewMediumDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/medium_size"
+                android:text="Upload Link"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                app:font_type="font_regular" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_gray"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tv_menu_bottom_sheet_photos"
+                style="@style/TextViewMediumDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/medium_size"
+                android:text="Photo"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                app:font_type="font_regular" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tv_menu_bottom_sheet_cancel"
+            style="@style/TextViewMediumDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="@dimen/medium_size"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            app:font_type="font_bold" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#41B0DD</item>
+        <item name="colorPrimaryDark">#3FA3D1</item>
+        <item name="colorAccent">#41B0DD</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:itemBackground">#41B0DD</item>
+
+
+        <!-- Status bar color. -->
+<!--        <item name="android:statusBarColor">@color/white</item>-->
+        <item name="android:statusBarColor">#41B0DD</item>
+
+    </style>
+
+    <style name="DetailTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#41B0DD</item>
+        <item name="colorPrimaryDark">#3FA3D1</item>
+        <item name="colorAccent">#41B0DD</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
+    <style name="CallTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/callBackground</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CropTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#41B0DD</item>
+        <item name="colorPrimaryDark">#3FA3D1</item>
+        <item name="colorAccent">#41B0DD</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="textViewCommon">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColorHint">@color/sky</item>
+        <item name="android:textColor">#3FA3D1</item>
+    </style>
+   <style name="textViewCommon1">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="textViewSpinner">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:fontFamily">@string/string_font</item>
+    </style>
+
+    <style name="TextViewNormal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="TextViewMedium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <!--White TextView Style-->
+
+    <style name="TextViewNormalWhite" parent="TextViewNormal">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextViewMediumWhite" parent="TextViewMedium">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--White TextView Style-->
+
+    <!--White TextView Style-->
+
+    <style name="TextViewNormalBlack" parent="TextViewNormal">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!--Dark TextView Style-->
+
+    <style name="TextViewNormalDark" parent="TextViewNormal">
+        <item name="android:textColor">@color/colorTextViewSetting</item>
+    </style>
+
+    <style name="TextViewMediumDark" parent="TextViewMedium">
+        <item name="android:textColor">@color/colorTextViewPrimary</item>
+    </style>
+
+
+    <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorPrimary">#ffffff</item>
+    </style>
+
+    <style name="CustomProgressDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@color/color_black</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/color_black</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="tabTextColor">@color/grey_font</item>
+        <item name="android:textColor">@color/grey_font</item>
+        <item name="tabSelectedTextColor">@color/text_color</item>
+        <item name="tabTextAppearance">@style/TextAppearance</item>
+    </style>
+
+    <style name="TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_3sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--<com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewNotificationUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_13sdp"
+            app:font_type="font_bold" />-->
+
+<!--        <com.flippbidd.CustomClass.CustomTextView-->
+<!--            android:id="@+id/textViewNotificationTitle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_toLeftOf="@+id/textViewNotificationMessagesTime"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/_5sdp"-->
+<!--            android:paddingLeft="@dimen/_3sdp"-->
+<!--            android:paddingRight="@dimen/_3sdp"-->
+<!--            android:textColor="@color/text_color_dark_grey"-->
+<!--            android:textSize="@dimen/_10sdp"-->
+<!--            app:font_type="font_regular" />-->
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewNotificationMessages"
+            android:layout_below="@+id/textViewNotificationMessagesTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_13sdp"
+            android:textFontWeight="300"
+            app:font_type="font_regular" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewNotificationMessagesTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:textColor="@color/grey_font"
+            android:textSize="@dimen/_10sdp"
+            app:font_type="font_regular" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageNotificationDelete"-->
+<!--            android:layout_width="@dimen/_15sdp"-->
+<!--            android:layout_height="@dimen/_15sdp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_margin="@dimen/_5sdp"-->
+<!--            android:src="@mipmap/ic_close" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_font"
+            android:layout_below="@+id/textViewNotificationMessages"/>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

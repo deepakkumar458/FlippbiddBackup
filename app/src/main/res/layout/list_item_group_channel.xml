@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlViewChatBox"
+    android:layout_width="match_parent"
+    android:layout_height="86.5dp"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86.5dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:background="?attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:id="@+id/rlChatUserImageBox"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/border_ring"
+            android:padding="@dimen/_1sdp">
+
+            <ImageView
+                android:id="@+id/image_group_channel_list_cover"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"/>
+
+            <com.stfalcon.multiimageview.MultiImageView
+                android:id="@+id/image_group_channel_list_cover1"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container_group_channel_list_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rlChatUserImageBox"
+            android:layout_alignTop="@id/rlChatUserImageBox"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/text_group_channel_list_topic"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:maxWidth="160dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/text_group_channel_list_member_count"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:minWidth="16dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/group_channel_list_member_background"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_group_channel_list_topic"
+            android:layout_alignLeft="@id/container_group_channel_list_topic"
+            android:orientation="horizontal">
+
+
+            <include layout="@layout/layout_typing_indicator"
+                android:id="@+id/container_group_channel_list_typing_indicator"
+                android:layout_width="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_height="16dp"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/text_group_channel_list_message"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:textColor="#8e8e8e"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="This sounded nonsense to Alice, so she said nothing, but set off at her being blah blah" />
+
+        </LinearLayout>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/text_group_channel_list_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/container_group_channel_list_topic"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:text="9999/99/99"
+            android:textSize="11.5sp" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/text_group_channel_list_unread_count"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/groupChannelUnreadCountText"
+            android:background="@drawable/group_channel_list_unread_background"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="9+" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dddddd"/>
+</RelativeLayout>

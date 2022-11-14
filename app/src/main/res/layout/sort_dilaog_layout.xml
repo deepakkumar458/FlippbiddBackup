@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/txtSortyBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/color_black"
+        android:textFontWeight="400"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <View
+        android:id="@+id/sortByLine"
+        android:layout_below="@+id/txtSortyBy"
+        android:layout_width="match_parent"
+        android:background="@color/grey_font"
+        android:layout_height="0.5dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioVacantGroup"
+        android:layout_below="@+id/sortByLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <RadioButton
+            android:id="@+id/radioHighToLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/sky"
+            android:padding="@dimen/_5sdp"
+            android:tag="highTolow"
+            android:text="High To Low"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioButton
+            android:id="@+id/radioLowToHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/sky"
+            android:padding="@dimen/_5sdp"
+            android:tag="lowTohigh"
+            android:text="Low To High"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioButton
+            android:id="@+id/radioNewToOld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/sky"
+            android:padding="@dimen/_5sdp"
+            android:tag="newToold"
+            android:text="New To Old"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sdp" />
+
+        <RadioButton
+            android:id="@+id/radioOldToNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/sky"
+            android:padding="@dimen/_5sdp"
+            android:tag="oldTonew"
+            android:text="Old To New"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sdp" />
+    </RadioGroup>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Gray"
+    android:paddingBottom="@dimen/_1sdp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/colorWhite"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivDocumentView"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/pdf"/>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tvDocumentTitle"
+            android:layout_toLeftOf="@+id/llViewBox"
+            android:layout_toRightOf="@+id/ivDocumentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:text="Test Documents"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_15sdp" />
+
+        <LinearLayout
+            android:id="@+id/llViewBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/ivDocumentDate"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_3sdp"
+                android:text="10/07/2020"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/_12sdp"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/ivDeleteDocument"
+                android:layout_gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:text="Delete"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                app:font_type="font_bold"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

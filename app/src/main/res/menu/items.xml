@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashbord"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/my_calendar"
+        android:title="My Calendar" />
+
+<!--    <item-->
+<!--        android:id="@+id/my_chat"-->
+<!--        android:title="Chat List" />-->
+<!---->
+    <item
+        android:id="@+id/my_upload"
+        android:title="Upload" />
+
+        <item
+            android:id="@+id/my_info"
+            android:title="My Info" />
+
+
+</menu>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/otherUserDetailscontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_230sdp">
+
+                <LinearLayout
+                    android:id="@+id/relativeLayoutAdminBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.flippbidd.CommonClass.CircleImageView
+                            android:id="@+id/imageCircleViewMyProfile"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:src="@mipmap/user"
+                            app:civ_border_color="@color/black"
+                            app:civ_border_width="1dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/imageProUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:src="@drawable/pro_user"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/textViewMyProfileUserNameValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="#2b79a8"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_semi_bold"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            android:id="@+id/ratingBar2"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:progressBackgroundTint="@color/chef"
+                            android:progressTint="@color/yellow"
+                            android:stepSize="0.5"
+                            android:rating="0"/>
+
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/textViewRatingCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/_3sdp"
+                            android:text="(0 Review)"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/_11sdp"
+                            android:textFontWeight="300"
+                            app:font_type="font_semi_bold"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <!--upgrad to pro-->
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/txtUpgradedToPro"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:background="@drawable/button_ab_gradient"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_14sdp"
+                        android:text="Upgrade to Pro"
+                        android:visibility="gone"
+                        app:font_type="font_bold"/>
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/txtProUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_dark"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="Subscription : Pro License"
+                        android:visibility="gone"
+                        app:font_type="font_regular"/>
+
+                    <com.flippbidd.CustomClass.CustomTextView
+                        android:id="@+id/tvPOFHeaderMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/doc_expired_message"
+                        android:textSize="@dimen/_13sdp"
+                        android:textColor="@color/color_black"/>
+
+                    <RelativeLayout
+                        android:id="@+id/relativePOFLink"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivPOFIcon"
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:src="@drawable/ic_pof_pdf"/>
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/tvPOFNameLink"
+                            android:layout_toRightOf="@+id/ivPOFIcon"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/color_black"/>
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/tvPOFLastUpdateDate"
+                            android:layout_below="@+id/ivPOFIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="Updated: 22/12/21"
+                            android:textSize="@dimen/_10sdp"
+                            android:textColor="@color/red"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativePOFUploadBox"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/_5sdp">
+                        <!--android:background="@drawable/bottom_top_sadow"-->
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/txtPOFMessage"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:text="Upload POF for real estate deal"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/color_black"/>
+
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:layout_below="@+id/txtPOFMessage"
+                            android:id="@+id/UploadPFO"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:background="@drawable/button_ab_gradient"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/_14sdp"
+                            android:text="Upload POF"
+                            app:font_type="font_bold"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearReviewNRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="Reviews &amp; Ratings"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/_13sdp"
+                    android:textFontWeight="400"
+                    app:font_type="font_regular" />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtReviewsViewAll"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="View all"
+                    android:textColor="@color/text_color_dark_grey_"
+                    android:textSize="@dimen/_11sdp"
+                    android:textFontWeight="600"
+                    app:font_type="font_bold"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerViewRatingNReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearPropertyHeaderBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtPropertyTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/_13sdp"
+                    android:textFontWeight="400"
+                    app:font_type="font_regular" />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtPropertiesViewAll"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="View all"
+                    android:textColor="@color/text_color_dark_grey_"
+                    android:textSize="@dimen/_11sdp"
+                    android:textFontWeight="600"
+                    app:font_type="font_bold"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerViewMyPropertyList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_progress_dialog" />
+    </RelativeLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.8"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/tv_photo_bottom_sheet_camera"
+        style="@style/TextViewMediumDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="@dimen/medium_size"
+        android:text="Single"
+        android:textColor="@color/colorWhite"
+        app:font_type="font_regular" />
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/tv_photo_bottom_sheet_gallery"
+        style="@style/TextViewMediumDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="@dimen/medium_size"
+        android:text="Multiple"
+        android:textColor="@color/colorWhite"
+        app:font_type="font_regular" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/normal_size"
+        android:background="@color/colorWhite" />
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/textCancel"
+        style="@style/TextViewMediumDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="@dimen/medium_size"
+        android:text="Cancel"
+        android:textColor="@color/colorWhite"
+        app:font_type="font_regular" />
+
+
+</LinearLayout>

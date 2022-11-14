@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tvFindMyDealAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/frameFindView"
+            android:hint="Search the address.."
+            android:maxLines="2"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/_14sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tvFindMyDealAddress"
+            android:layout_toLeftOf="@+id/frameFindView"
+            android:background="@color/grey_font" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/frameFindView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/xml_button"
+            android:backgroundTint="@color/text_color"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:contentPaddingLeft="@dimen/_10sdp"
+            app:contentPaddingRight="@dimen/_10sdp"
+            app:contentPaddingTop="@dimen/_2sdp">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/btnFindView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Find"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearRecentlyFMD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Recently Searched"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_type="font_regular" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRecentlySearchDeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:minHeight="@dimen/_150sdp"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_recently_serach_ui" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearOtherFMD"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Other Searches"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_type="font_regular" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOtherDeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_recently_serach_ui" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_progress_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

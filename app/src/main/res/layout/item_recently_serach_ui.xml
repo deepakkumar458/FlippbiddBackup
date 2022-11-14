@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_font"
+    android:paddingTop="@dimen/_1sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@color/colorWhite"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/viewTimeCountDown"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/timeshow"
+            android:backgroundTint="@color/color_create_chat"
+            android:visibility="gone">
+
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewofChatTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textAlignment="center"
+                android:text="New on Flippbidd"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_8sdp"
+                app:font_type="font_regular" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearViewBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/viewTimeCountDown"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivSearchLocationView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                app:tint="@color/colorPrimary"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/iclocation"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/tvSearchAddress"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/text_color_medium_grey"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeUserListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_3sdp"
+            android:layout_below="@+id/linearViewBox"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:visibility="gone">
+
+            <com.flippbidd.CommonClass.CircleImageView
+                android:id="@+id/imageOne"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:visibility="gone"
+                android:src="@drawable/profile_thumbnail" />
+
+            <com.flippbidd.CommonClass.CircleImageView
+                android:id="@+id/imageTwo"
+                android:layout_toEndOf="@+id/imageOne"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_minus5sdp"
+                android:visibility="gone"
+                android:src="@drawable/profile_placeholder"/>
+
+            <com.flippbidd.CommonClass.CircleImageView
+                android:id="@+id/imageThree"
+                android:layout_toEndOf="@+id/imageTwo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_minus5sdp"
+                android:visibility="gone"
+                android:src="@drawable/profile_thumbnail"/>
+
+            <com.flippbidd.CommonClass.CircleImageView
+                android:id="@+id/imageFour"
+                android:layout_toEndOf="@+id/imageThree"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_minus5sdp"
+                android:visibility="gone"
+                android:src="@drawable/profile_placeholder"/>
+
+            <com.flippbidd.CommonClass.CircleImageView
+                android:id="@+id/imageFive"
+                android:layout_toEndOf="@+id/imageFour"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_minus5sdp"
+                android:visibility="gone"
+                android:src="@drawable/profile_thumbnail"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeMoreCounts"
+                android:layout_toEndOf="@+id/imageFive"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_minus5sdp"
+                android:backgroundTint="@color/text_color_dark_grey_"
+                android:visibility="gone"
+                android:background="@drawable/circular_button">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="5+"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

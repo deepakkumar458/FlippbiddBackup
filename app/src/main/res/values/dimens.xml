@@ -1,0 +1,17 @@
+<resources>
+
+
+    <!-- Common padding or margin size -->
+    <dimen name="normal_size">@dimen/_8sdp</dimen>
+    <dimen name="medium_size">@dimen/_12sdp</dimen>
+
+    <!-- Common Text Size -->
+    <dimen name="text_size_normal">@dimen/_12sdp</dimen>
+    <dimen name="text_size_medium">@dimen/_14sdp</dimen>
+
+
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="placeholder_text_height">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

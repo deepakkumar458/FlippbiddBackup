@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.johnkil.android-robototextview:robototextview:4.0.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/594fbe5d72ef6096c869b721539ff65e/jetified-robototextview-4.0.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/594fbe5d72ef6096c869b721539ff65e/jetified-robototextview-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/594fbe5d72ef6096c869b721539ff65e/jetified-robototextview-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/594fbe5d72ef6096c869b721539ff65e/jetified-robototextview-4.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.johnkil.android-robototextview/robototextview/4.0.0/ebc08988130c849173bd82c04e53d6930154adbc/robototextview-4.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.johnkil.android-robototextview/robototextview/4.0.0/ea936dde206acba9dcdae216b97b14cbac80381f/robototextview-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

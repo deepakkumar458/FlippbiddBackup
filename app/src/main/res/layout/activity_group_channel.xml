@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_group_channel"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/Toolbar"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/ivCreateNewChat"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/add_new_chat" />
+                <!--app:popupTheme="@style/Theme.AppCompat.Light"-->
+            </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/chatListToolbar"
+        android:background="@color/bg_color"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/rlSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/button_box"
+            android:backgroundTint="#EAE7E7">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_search" />
+
+            <com.flippbidd.CustomClass.CustomEditText
+                android:id="@+id/edtBusinessSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivSearch"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="font_regular" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_below="@+id/rlSearch"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container_group_channel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></FrameLayout>
+
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

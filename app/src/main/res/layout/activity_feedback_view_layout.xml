@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewFeedbackTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center|center_vertical"
+                android:text="Flippbidd Feedback"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_16sdp"
+                app:font_type="font_bold" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewPropertyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewFeedbackTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center|center_vertical"
+                android:text="555 Main Street, New York, USA"
+                android:textColor="@color/text_color_medium_grey"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="font_regular" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageCloseView"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@mipmap/ic_close" />
+
+        </RelativeLayout>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/text_color_medium_grey"/>
+
+            <!--i was able to get access the property-->
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewAbleAccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewFeedbackTitle"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:gravity="center|center_vertical"
+                android:text="@string/get_access_property"
+                android:textColor="@color/text_color_medium_grey"
+                android:textSize="@dimen/_14sdp"
+                app:font_type="font_regular" />
+
+            <RadioGroup
+                android:id="@+id/rAbleToAccess"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="1"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes"/>
+
+                <RadioButton
+                    android:id="@+id/rNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="No"/>
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/viewMyExperienceLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/text_color_medium_grey"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearViewFirst"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--My Experience was-->
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewMyExperience"
+                android:layout_below="@+id/textViewFeedbackTitle"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical"
+                android:text="My Experience Was"
+                android:textColor="@color/text_color_medium_grey"
+                android:textSize="@dimen/_14sdp"
+                app:font_type="font_regular" />
+
+            <RadioGroup
+                android:id="@+id/rMyExperience"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Excellent"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="4"
+                    android:text="Good"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="3"
+                    android:text="Average"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="2"
+                    android:text="Not Good"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="1"
+                    android:text="Terrible"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearViewSecond"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--property condition-->
+            <View
+                android:id="@+id/viewPropertyConditionLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/text_color_medium_grey"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewPropertyCondition"
+                android:layout_below="@+id/textViewFeedbackTitle"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical"
+                android:text="Property Condition"
+                android:textColor="@color/text_color_medium_grey"
+                android:textSize="@dimen/_14sdp"
+                app:font_type="font_regular" />
+
+            <RadioGroup
+                android:id="@+id/rPropertyCondition"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="1"
+                    android:text="As Expected"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="2"
+                    android:text="Below Expectation"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="3"
+                    android:text="Incorrect Description"/>
+
+            </RadioGroup>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearViewThird"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--ready to request contract-->
+            <View
+                android:id="@+id/viewContractLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/text_color_medium_grey"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewContractRequest"
+                android:layout_below="@+id/textViewFeedbackTitle"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="I am ready to request the contracts via FlippBidd"
+                android:textColor="@color/text_color_medium_grey"
+                android:textSize="@dimen/_14sdp"
+                app:font_type="font_regular" />
+
+            <RadioGroup
+                android:id="@+id/rRequestContract"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="1"
+                    android:text="Take me to request contract page"/>
+
+                <RadioButton
+                    android:id="@+id/radioMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_black"
+                    android:tag="2"
+                    android:text="I am not ready yet"/>
+
+
+            </RadioGroup>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewFeedbackTitle"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:text="@string/feedback_terms"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14sdp"
+            app:font_type="font_semi_bold" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/feedbackTermsChecked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="I agree to Flippbidd's Terms &amp; Condition and Privacy Policy"/>
+
+
+        <com.flippbidd.CustomClass.CustomAppCompatButton
+            android:id="@+id/imageActionSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/button_ab_gradient"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            app:cornerRadius="@dimen/_5sdp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>

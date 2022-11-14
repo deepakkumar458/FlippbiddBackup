@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorWhite"
+        android:elevation="7dp"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageBackIcon"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/new_back" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_toRightOf="@+id/imageBackIcon"
+            android:gravity="left|center_vertical"
+            android:padding="@dimen/_3sdp"
+            android:text="Buy Credit"
+            android:textColor="@color/tint_color"
+            android:textSize="@dimen/_14sdp"
+            app:font_type="font_bold" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/credit" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewHeaderTitl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/viewLine"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_3sdp"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_25sdp"
+                app:font_type="font_bold" />
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textViewOfCreditRemaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewLine"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/credit_mess"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp"
+                app:font_type="font_bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linearOfFirst"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewBuyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:text="BUY CREDIT"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_16sdp"
+                    app:font_type="font_bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewOfPlanList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeOfSecond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/common_ract"
+                    android:backgroundTint="@color/text_color_dark_grey_"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+
+                    <com.flippbidd.CustomClass.CustomAppCompatButton
+                        android:id="@+id/btnUnSubscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@android:color/transparent"
+                        android:text="Unsubscribe"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="font_regular" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_progress_dialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

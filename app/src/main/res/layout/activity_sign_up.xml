@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.SingUp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeTopStrip"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logoSingUp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/flippbidd_logo"/>
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sing_header_message1"
+                    android:layout_alignBaseline="@+id/logoSingUp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#0f568a"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textFontWeight="600"
+                    app:font_type="font_semi_bold"/>
+
+            </RelativeLayout>
+
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sing_header_message"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:textSize="16sp"
+                android:textColor="#808080"
+                android:textFontWeight="600"
+                android:textStyle="bold"
+                app:font_type="font_semi_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/username" />
+
+                <com.flippbidd.CustomClass.CustomEditText
+                    android:id="@+id/textViewSingUpFullName"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/username" />
+                <!--fullname-->
+
+                <com.flippbidd.CustomClass.CustomEditText
+                    android:id="@+id/textViewSingUpUserName"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/email"/>
+
+                <com.flippbidd.CustomClass.CustomEditText
+                    android:id="@+id/textViewSingUpEmail"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+            <!--mobile with code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_local_phone"/>
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/registerPhoneCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"/>
+                <!--app:ccp_customMasterCountries="US,IN,NZ,BD,PL,RO,ZW"-->
+
+                <com.flippbidd.CustomClass.CustomEditText
+                    android:id="@+id/etRegisterPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:maxLength="10"
+                    android:gravity="left"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    style="@style/textViewCommon"
+                    app:font_type="font_regular"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/pass"/>
+
+                <com.flippbidd.CustomClass.CustomEditText
+                    android:id="@+id/textViewSingUpPassword"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/pass"/>
+                <!--conf_pass-->
+
+                <com.flippbidd.CustomClass.CustomEditText
+                    android:id="@+id/textViewSingUpConfirmPassword"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+       <!--     <RelativeLayout
+                android:id="@+id/relativeSingUpSelectState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/imageViewStateIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_state" />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewSelectStates"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/imageViewSelectState"
+                    android:layout_toRightOf="@+id/imageViewStateIcon"
+                    android:background="@android:color/transparent"
+                    android:hint="State"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+                <ImageView
+                    android:id="@+id/imageViewSelectState"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/down_arrow" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />
+
+            <RelativeLayout
+                android:id="@+id/relativeSingUpSelectCity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/imageViewCityIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_city" />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewSelectCity"
+                    style="@style/textViewCommon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/imageViewSelectCity"
+                    android:layout_toRightOf="@+id/imageViewCityIcon"
+                    android:background="@android:color/transparent"
+                    android:hint="City"
+                    android:padding="@dimen/_10sdp"
+                    app:font_type="font_regular" />
+
+                <ImageView
+                    android:id="@+id/imageViewSelectCity"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/down_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray" />-->
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <CheckBox
+                    android:id="@+id/checkBoxTermsAndCondistion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:button="@drawable/check_box_selector"
+                    />
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewTermsAndCondistion"
+                    android:layout_toRightOf="@+id/checkBoxTermsAndCondistion"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="#a6a6a6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColorLink="#2b79a8"
+                    android:gravity="center"
+                    app:font_type="font_regular" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:elevation="5dp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <com.flippbidd.CustomClass.CustomAppCompatButton
+                    android:id="@+id/btnSubmite"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/button_ab_gradient"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:font_type="font_bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Already have an account ?"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#a6a6a6"/>
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/tvSingInOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:text=" Sign In"
+                    android:textColor="#2b79a8"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    app:font_type="font_bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_progress_dialog" />
+</RelativeLayout>

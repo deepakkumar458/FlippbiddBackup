@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ab_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/chatListToolbar"
+        android:background="@drawable/new_chat_bg_ract"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tvNewChatCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_alignParentLeft="true"
+            android:text="Cancel"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"/>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tvNewCreateGroupHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:text="Add Participants"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"/>
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/tvNewChatNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:text="Next"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"/>
+
+     <!--   <RelativeLayout
+            android:id="@+id/rlSearch"
+            android:layout_below="@+id/tvNewCreateGroupHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/button_box"
+            android:backgroundTint="#EAE7E7">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_search" />
+
+            <com.flippbidd.CustomClass.CustomEditText
+                android:id="@+id/edtBusinessSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivSearch"
+                android:background="@android:color/transparent"
+                android:hint="Search for people"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="font_regular" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewSearchBoxLine"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlSearch"
+            android:background="@color/line_color" />
+-->
+    </RelativeLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ab_gradient"
+        app:elevation="0dp"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_create_group_channel"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            android:theme="@style/Toolbar">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container_create_group_channel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="@dimen/_40sdp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

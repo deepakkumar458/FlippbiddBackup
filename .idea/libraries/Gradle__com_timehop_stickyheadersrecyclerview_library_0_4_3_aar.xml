@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.timehop.stickyheadersrecyclerview:library:0.4.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13a8bfda4a40711e02362ef68fb66680/jetified-library-0.4.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f5778c6323f59e8e45bae751d726c73/jetified-library-0.4.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f5778c6323f59e8e45bae751d726c73/jetified-library-0.4.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8f5778c6323f59e8e45bae751d726c73/jetified-library-0.4.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.timehop.stickyheadersrecyclerview/library/0.4.3/db32b2ffdfd9c410874c6e7df3ee30bee7df54d8/library-0.4.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.timehop.stickyheadersrecyclerview/library/0.4.3/2432602a5ff02bb0e3ea9c081eae438c588ea7f1/library-0.4.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

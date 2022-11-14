@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mainAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_white">
+        <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageInAppBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:tint="@color/color_black"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainAppbar"
+        android:layout_above="@id/textTermsOfPolicy"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <!--header icon-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/mainLogo"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_image_icon" />
+
+            <!--fix text-->
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/textUserNameWithTagMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:gravity="center|center_vertical"
+                android:text="Welcome "
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_13sdp"
+                app:font_type="font_regular" />
+
+            <!--view card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textUserNameWithTagMessage"
+                app:cardBackgroundColor="#F5F5F5"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF8F0D">
+
+                        <com.flippbidd.CustomClass.CustomTextView
+                            android:id="@+id/textPriceWithPlanName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:gravity="center|center_vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:text="Welcome "
+                            android:textColor="@color/text_color_white"
+                            android:textSize="@dimen/_13sdp"
+                            app:font_type="font_regular" />
+
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llFeaturesView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#F5F5F5">
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!--description-->
+            <com.flippbidd.views.ShowMoreTextView
+                android:id="@+id/textDescriptionMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainCard"
+                android:lineSpacingExtra="5dp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/dummy_text"
+                android:textColor="@color/Gray"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Term and Condition-->
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/textTermsOfService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRestore"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center|center_vertical"
+        android:text="Terms of Service"
+        android:textColor="@color/text_color_dark_grey"
+        android:textSize="@dimen/_10sdp"
+        app:font_type="font_regular" />
+
+    <com.flippbidd.CustomClass.CustomTextView
+        android:id="@+id/textTermsOfPolicy"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center|center_vertical"
+        android:text="Privacy Policy"
+        android:textColor="@color/text_color_dark_grey"
+        android:textSize="@dimen/_10sdp"
+        android:layout_above="@+id/btnRestore"
+        app:font_type="font_regular" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRestore"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/xml_button"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="RESTORE"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

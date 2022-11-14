@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:id="@+id/otherUserDetailscontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_5sdp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageProfileBackView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:rotation="180"
+                app:tint="@color/color_black"
+                android:src="@drawable/back_arrow"/>
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Profile"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/_15sdp"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/relativeLayoutAdminBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.flippbidd.CommonClass.CircleImageView
+                        android:id="@+id/imageViewAdminProfile"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@mipmap/user"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/imageProUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/pro_user"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewAdminName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="#2b79a8"
+                    android:textSize="@dimen/_13sdp"
+                    app:font_type="font_semi_bold"/>
+
+                <RatingBar
+                    android:id="@+id/rotationratingbar_main"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:progressBackgroundTint="@color/chef"
+                    android:progressTint="@color/yellow"
+                    android:stepSize="0.5"
+                    android:rating="0"/>
+
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/txtAdminRatingReviewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/_3sdp"
+                    android:text="0 Review"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textFontWeight="300" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearReviewNRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Reviews &amp; Ratings"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/_13sdp"
+                android:textFontWeight="400"
+                app:font_type="font_regular" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtReviewsViewAll"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="View all"
+                android:textColor="@color/text_color_dark_grey_"
+                android:textSize="@dimen/_11sdp"
+                android:textFontWeight="600"
+                app:font_type="font_bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linerViewRatingNReview"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!--be the first review and rating-->
+        <RelativeLayout
+            android:id="@+id/relativeBeTheFirstRateBox"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/common_ract">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtFirstReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Be the first to rate this user"
+                android:textColor="@color/tint_color"
+                android:textSize="@dimen/_13sdp"
+                android:textFontWeight="400"
+                app:font_type="font_semi_bold" />
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/txtFirstReview"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/button_gradian">
+
+                <com.flippbidd.CustomClass.CustomTextView
+                    android:id="@+id/textViewOfSubmitReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Submit Review"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_type="font_bold" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPropertyHeaderBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtPropertyTitle"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Properties (0)"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/_13sdp"
+                android:textFontWeight="400"
+                app:font_type="font_regular" />
+
+            <com.flippbidd.CustomClass.CustomTextView
+                android:id="@+id/txtPropertiesViewAll"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="View all"
+                android:textColor="@color/text_color_dark_grey_"
+                android:textSize="@dimen/_11sdp"
+                android:textFontWeight="600"
+                app:font_type="font_bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linerViewMyPropertyList"
+            android:background="#1E000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

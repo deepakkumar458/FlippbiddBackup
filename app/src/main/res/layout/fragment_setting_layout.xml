@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewChangePasswordTitle"
+            style="@style/textViewCommon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/_15sdp"
+            android:text="Change Password"
+            app:font_type="font_regular" />
+
+
+        <View
+            android:id="@+id/view_change_password_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#3c3c3c" />
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewHelp"
+            style="@style/textViewCommon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="textVisiblePassword"
+            android:padding="@dimen/_15sdp"
+            android:text="Help"
+            android:visibility="gone"
+            app:font_type="font_regular" />
+
+
+        <!--        <View-->
+        <!--            android:id="@+id/view_help_lin"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0.5dp"-->
+        <!--            android:background="#3c3c3c" />-->
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewNotificationSettings"
+            style="@style/textViewCommon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/_15sdp"
+            android:text="Notification Settings"
+            app:font_type="font_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#3c3c3c" />
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewSupportedSettings"
+            style="@style/textViewCommon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/_15sdp"
+            android:text="Customer Support"
+            app:font_type="font_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#3c3c3c" />
+
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewRateThisAppSettings"
+            style="@style/textViewCommon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/_15sdp"
+            android:text="Rate This App"
+            app:font_type="font_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#3c3c3c" />
+
+        <com.flippbidd.CustomClass.CustomTextView
+            android:id="@+id/textViewRestorePurchase"
+            style="@style/textViewCommon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/_15sdp"
+            android:text="Restore Purchase"
+            app:font_type="font_regular" />
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_progress_dialog" />
+
+    <LinearLayout
+      android:id="@+id/delete_account_btn"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.flippbidd.CustomClass.CustomTextView
+            android:text="Delete Account"
+            android:textColor="@color/red"
+            app:font_type="font_bold"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.flippbidd.CustomClass.CustomTextView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
